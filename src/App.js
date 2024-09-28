@@ -14,9 +14,8 @@ function App() {
         setLoading(false);
       })
       .catch((error) => console.error('Error fetching data:', error));
-  }, []); // Empty dependency array ensures this runs once when the component mounts
+  }, []); 
 
-  // Show loading spinner while fetching data
   if (loading) {
     return <h2>Loading users...</h2>;
   }
@@ -35,7 +34,6 @@ function App() {
   );
 }
 
-// Basic styling for the app
 const styles = {
   container: {
     textAlign: 'center',
