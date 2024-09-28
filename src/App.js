@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import 'App.css'
 function App() {
-  // State to hold the list of users
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fetch users from the API when the component mounts
   useEffect(() => {
     fetch('https://randomuser.me/api/?results=5')
       .then((response) => response.json())
