@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import 'App.css'
 function App() {
   // State to hold the list of users
   const [users, setUsers] = useState([]);
@@ -21,11 +21,11 @@ function App() {
   }
 
   return (
-    <div style={styles.container}>
+    <div class='container'>
       <h1>Random User List</h1>
-      <ul style={styles.list}>
+      <ul class='list'>
         {users.map((user, index) => (
-          <li key={index} style={styles.listItem}>
+          <li key={index} className='listItem'>
             {user.name.first} {user.name.last}
           </li>
         ))}
@@ -34,20 +34,5 @@ function App() {
   );
 }
 
-const styles = {
-  container: {
-    textAlign: 'center',
-    marginTop: '50px',
-  },
-  list: {
-    listStyleType: 'none',
-    padding: 0,
-    marginTop: '20px',
-  },
-  listItem: {
-    fontSize: '18px',
-    marginBottom: '10px',
-  },
-};
 
 export default App;
